@@ -12,7 +12,7 @@ public class Chest : MonoBehaviour
 
     void Awake ()
     {
-        audioSource = gameObject.GetComponent<AudioSource>();
+        clip = gameObject.GetComponent<AudioSource>();
     }
 
     void Start()
