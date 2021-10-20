@@ -5,28 +5,29 @@ using UnityEngine;
 public class Chest : MonoBehaviour
 {    
     public GameObject effectChest;
-    public Transform effectTransform;
-
-    private bool triggered;
-    private AudioSource clip;
-
-    void Awake ()
-    {
-        clip = gameObject.GetComponent<AudioSource>();
-    }
+    public Transform effectChestTransform;
+   
+    public GameObject effectEnergy;
+    public Transform effectEnergyTransform;
 
     void Start()
     {
-        
+      
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
-            clip.Play();
             Destroy(gameObject);
-            Instantiate(effectChest, effectTransform);
+            Instantiate(effectChest, effectChestTransform);
         }
+
+        if(other.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+      
     }
+    
 }
