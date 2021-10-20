@@ -8,6 +8,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip step2;
     public float stepDuration;
 
+    public AudioClip chest;
+
     private AudioSource audioSource;
     private int stepCount;
     private bool isPlaying;
@@ -46,5 +48,10 @@ public class AudioManager : MonoBehaviour
     {
         yield return new WaitForSeconds(stepDuration);
         isPlaying = false;
+    }
+
+    public void PlayChest()
+    {
+        audioSource.PlayOneShot(chest, 1f);
     }
 }
