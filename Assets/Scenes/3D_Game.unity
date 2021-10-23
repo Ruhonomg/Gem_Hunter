@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerSlider: {fileID: 606702476}
-  gameTime: 250
+  gameTime: 200
   FinalDoor: {fileID: 639099223}
   chestCount: 4
   score: 0
