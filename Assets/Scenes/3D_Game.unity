@@ -6117,8 +6117,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMoving: 0
-  MoveSpeed: 20
-  SprintSpeed: 5.335
+  MoveSpeed: 15
+  SprintSpeed: 20
   RotationSmoothTime: 0.12
   SpeedChangeRate: 10
   JumpHeight: 1.2
