@@ -6,9 +6,8 @@ public class Chest : MonoBehaviour
 {    
     public GameObject effectChest;
     public Transform effectChestTransform;
-   
-    public GameObject effectEnergy;
-    public Transform effectEnergyTransform;
+
+    public GameObject GameManager;
 
     void Start()
     {
@@ -19,12 +18,8 @@ public class Chest : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            Destroy(gameObject);
+            GameManager.GetComponent<GameManager>().AddPoint();
             Instantiate(effectChest, effectChestTransform);
-        }
-
-        if(other.tag == "Player")
-        {
             Destroy(gameObject);
         }
       

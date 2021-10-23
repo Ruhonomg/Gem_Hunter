@@ -6,24 +6,20 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public Slider timerSlider;
+   public Slider timerSlider;
    public float gameTime;
+
+   public GameObject FinalDoor;
 
     private bool stopTimer;
 
-    public GameObject portal;
-    public Transform portalTransform;
-
-
     public int chestCount;
     public int score;
-    public Text score_Text;
     public GameObject gameOverBox;
     public GameObject victoryBox;
     
     void Start()
     {
-        score_Text.text = "0";
         stopTimer = false;
         timerSlider.maxValue = gameTime;
         timerSlider.value = gameTime;
@@ -40,11 +36,9 @@ public class GameManager : MonoBehaviour
         score++;
         if(score == chestCount)
         {
-            Instantiate(portal, portalTransform);
+            FinalDoor.SetActive(false);
         }
     }
-
-
     
     void Update()
     {
